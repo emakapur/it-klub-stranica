@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IT klub – školski klub za programiranje i tehnologiju. Učimo web, igre i Python kroz prave projekte.">
+  <title>IT klub | Školski Coding Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Glavna navigacija">
+      <a href="#pocetna" class="logo" aria-label="IT klub, početna"><span class="logo-mark" aria-hidden="true">&lt;/&gt;</span>IT<span class="logo-accent">klub</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#pocetna">Početna</a></li>
+        <li><a href="#o-nama">O nama</a></li>
+        <li><a href="#projekti">Projekti</a></li>
+        <li><a href="#prijava" class="nav-cta">Prijavi se</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="sadrzaj">
+    <section class="hero" id="pocetna">
+      <div class="container hero-inner">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Upis u klub je otvoren · školska 2026/2027.</p>
+        <h1>Pišemo kod.<br><span class="gradient-text">Gradimo budućnost.</span></h1>
+        <p class="lead">IT klub je školski Coding Club za sve koji žele naučiti programirati i napraviti vlastitu stranicu, igru ili aplikaciju. Predznanje nije potrebno, dovoljno je da želiš probati.</p>
+        <div class="hero-actions">
+          <a href="#prijava" class="btn btn-primary">Prijavi se u klub</a>
+          <a href="#projekti" class="btn btn-ghost">Pogledaj projekte</a>
+        </div>
+        <ul class="chips" aria-label="Tehnologije koje učimo">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>Git</li>
+        </ul>
+        <ul class="stats">
+          <li><strong>4</strong><span>projekta u izradi</span></li>
+          <li><strong>1×</strong><span>susret sedmično</span></li>
+          <li><strong>0</strong><span>predznanja potrebno</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="o-nama">
+      <div class="container">
+        <h2>O nama</h2>
+        <div class="about-grid">
+          <p>IT klub okuplja učenike koji vole programiranje i tehnologiju. Na susretima učimo osnove web razvoja, rješavamo zadatke i radimo na zajedničkim projektima. Svako je dobrodošao, bez obzira na predznanje.</p>
+          <ul class="facts">
+            <li><strong>Redovni susreti</strong>Okupljamo se u školi i zajedno radimo na projektima.</li>
+            <li><strong>Rad u paru</strong>Projekte radimo u parovima, uz Git i GitHub kao pravi razvojni timovi.</li>
+            <li><strong>Za sve nivoe</strong>Početnici i napredniji uče jedni od drugih.</li>
+          </ul>
+        </div>
+        <h3>Članovi</h3>
+        <div class="members">
+          <article class="member">
+            <div class="avatar" aria-hidden="true">EK</div>
+            <div>
+              <h4>Ema Kapur</h4>
+              <p>Front-end i dizajn</p>
+            </div>
+          </article>
+          <article class="member">
+            <div class="avatar" aria-hidden="true">IP</div>
+            <div>
+              <h4>Ime Prezime</h4>
+              <p>JavaScript i dokumentacija</p>
+            </div>
+          </article>
+          <article class="member member-join">
+            <div class="avatar" aria-hidden="true">+</div>
+            <div>
+              <h4>Tvoje ime ovdje</h4>
+              <p>Prijavi se i pridruži nam se</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projekti">
+      <div class="container">
+        <h2>Projekti</h2>
+        <p class="section-intro">Ovo su stvari koje članovi kluba trenutno prave i isprobavaju.</p>
+        <div class="filters" role="group" aria-label="Filter projekata">
+          <button type="button" class="filter-btn active" data-filter="sve" aria-pressed="true">Sve</button>
+          <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+          <button type="button" class="filter-btn" data-filter="igre" aria-pressed="false">Igre</button>
+          <button type="button" class="filter-btn" data-filter="python" aria-pressed="false">Python</button>
+        </div>
+        <div class="projects" id="projekti-lista">
+          <article class="project" data-kategorija="web">
+            <h3>Školska oglasna ploča</h3>
+            <p>Web stranica s obavijestima, događajima i važnim datumima za učenike.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          </article>
+          <article class="project" data-kategorija="igre">
+            <h3>Memory igra</h3>
+            <p>Igra pamćenja parova karata napravljena u čistom JavaScriptu.</p>
+            <ul class="tags"><li>JavaScript</li><li>DOM</li></ul>
+          </article>
+          <article class="project" data-kategorija="web">
+            <h3>Kalkulator prosjeka ocjena</h3>
+            <p>Alat koji računa prosjek ocjena i pokazuje šta treba za višu ocjenu.</p>
+            <ul class="tags"><li>JavaScript</li><li>HTML</li></ul>
+          </article>
+          <article class="project" data-kategorija="python">
+            <h3>Bot za podsjetnike</h3>
+            <p>Python skripta koja podsjeća članove na termine i zadatke kluba.</p>
+            <ul class="tags"><li>Python</li><li>Git</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
