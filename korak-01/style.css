@@ -1,0 +1,55 @@
+/* ===== Varijable i osnovni stilovi ===== */
+:root {
+  --bg: #0d0f1f;
+  --surface: #151834;
+  --surface-2: #1c2145;
+  --line: #2a3160;
+  --text: #eceefb;
+  --muted: #a2a8cf;
+  --violet: #9d82ff;
+  --blue: #5b9bff;
+  --mint: #4ade9a;
+  --error: #ff7a90;
+  --btn-a: #6b46f0;
+  --btn-b: #2f6fe0;
+  --grad: linear-gradient(135deg, var(--btn-a), var(--btn-b));
+  --font-head: "Sora", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-code: "Fira Code", ui-monospace, Consolas, monospace;
+  --radius: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-head);
+  line-height: 1.15;
+  margin: 0 0 0.6em;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin-inline: auto;
+}
