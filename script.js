@@ -92,3 +92,24 @@ if (prekidac && meni) {
     }
   });
 }
+
+// ===== 3. Filtriranje projekata po kategoriji =====
+const filterDugmad = document.querySelectorAll(".filter-btn");
+const projekti = document.querySelectorAll(".project");
+
+filterDugmad.forEach((dugme) => {
+  dugme.addEventListener("click", () => {
+    const kategorija = dugme.dataset.filter;
+
+    filterDugmad.forEach((d) => {
+      const aktivno = d === dugme;
+      d.classList.toggle("active", aktivno);
+      d.setAttribute("aria-pressed", String(aktivno));
+    });
+
+    projekti.forEach((projekat) => {
+      const vidljiv = kategorija === "sve" || projekat.dataset.kategorija === kategorija;
+      projekat.hidden = !vidljiv;
+    });
+  });
+});
