@@ -65,3 +65,30 @@ function azurirajBrojac() {
 if (poljePoruka) {
   poljePoruka.addEventListener("input", azurirajBrojac);
 }
+
+// ===== 2. Hamburger meni na mobitelu =====
+const prekidac = document.getElementById("nav-toggle");
+const meni = document.getElementById("nav-links");
+
+function postaviMeni(otvoren) {
+  meni.classList.toggle("open", otvoren);
+  prekidac.setAttribute("aria-expanded", String(otvoren));
+  prekidac.setAttribute("aria-label", otvoren ? "Zatvori meni" : "Otvori meni");
+}
+
+if (prekidac && meni) {
+  prekidac.addEventListener("click", () => {
+    postaviMeni(!meni.classList.contains("open"));
+  });
+
+  meni.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => postaviMeni(false));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && meni.classList.contains("open")) {
+      postaviMeni(false);
+      prekidac.focus();
+    }
+  });
+}
