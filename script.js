@@ -113,3 +113,24 @@ filterDugmad.forEach((dugme) => {
     });
   });
 });
+
+// ===== 4. Isticanje aktivne sekcije u navigaciji =====
+const sekcije = document.querySelectorAll("main section[id]");
+const navLinkovi = document.querySelectorAll(".nav-links a");
+
+if ("IntersectionObserver" in window && sekcije.length > 0) {
+  const promatrac = new IntersectionObserver(
+    (unosi) => {
+      unosi.forEach((unos) => {
+        if (unos.isIntersecting) {
+          navLinkovi.forEach((link) => {
+            link.classList.toggle("active", link.getAttribute("href") === "#" + unos.target.id);
+          });
+        }
+      });
+    },
+    { rootMargin: "-45% 0px -50% 0px" }
+  );
+
+  sekcije.forEach((sekcija) => promatrac.observe(sekcija));
+}
